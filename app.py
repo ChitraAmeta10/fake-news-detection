@@ -5,21 +5,26 @@ import joblib
 model = joblib.load("fake_news_model.pkl")
 vectorizer = joblib.load("vectorizer.pkl")
 
-st.title("📰 Fake News Detection")
+# Page setup
+st.set_page_config(page_title="Fake News Detection", layout="centered")
 
-st.write("Enter a news headline and click Predict.")
-# Text Input
+st.markdown("""
+    <h1 style='text-align: center;'>📰 Fake News Detection</h1>
+    <p style='text-align: center;'>Enter a news headline and click Predict.</p>
+""", unsafe_allow_html=True)
+
+# Input text
 user_input = st.text_input("News text:")
 
-# Predict Button
+# Predict button
 if st.button("Predict"):
     if user_input.strip() == "":
         st.warning("Please enter some text.")
     else:
         x = vectorizer.transform([user_input])
-        pred = model.predict(x)[0]   # "fake" or "real"
+        pred = model.predict(x)[0]
 
-        if pred == "fake":
+        if pred == "fake" or pred == 1:
             st.error("Fake News")
         else:
             st.success("Real News")
