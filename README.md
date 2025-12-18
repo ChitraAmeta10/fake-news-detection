@@ -5,7 +5,7 @@ The model is trained on the Constraint 2021 COVID-19 Fake News Dataset and class
 🟢 Real News
 🚀 Live Demo
 Try the app here:
-👉 https://chitra231025-fake-news-detection.streamlit.app/
+👉 https://huggingface.co/spaces/Chitra10/fake-news-detection
 📌 Features
 ✔ Detects fake vs real news in real-time
 ✔ Simple & clean Streamlit UI
