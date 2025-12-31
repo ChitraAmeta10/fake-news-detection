@@ -16,7 +16,7 @@ Try the app here:
 📂 Project Structure
 fake-news-detection/
 │── app.py                   # Streamlit app
-│── fake_news.py             # ML training script
+│── fake_news.py             # ML training script 
 │── predict.py               # CLI prediction script
 │── fake_news_model.pkl      # Saved ML model
 │── vectorizer.pkl           # TF-IDF vectorizer
